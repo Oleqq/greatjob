@@ -40,6 +40,15 @@ npm run preview
 
 `npm run dev` собирает проект, запускает наблюдение за Pug/SCSS/JS и поднимает локальный сервер на `http://127.0.0.1:4173`.
 
+## Деплой
+
+Проект деплоится на Vercel как статичная сборка через `vercel.json`:
+
+- `buildCommand`: `npm run build`;
+- `outputDirectory`: `static`.
+
+Vercel сам ставит зависимости и собирает Pug/SCSS/JS перед раздачей — коммитить `static/index.html`, `static/css/style.css` и `static/js/app.js` не нужно.
+
 ## Контекст макета
 
 Источник: [GreatJob в Figma](https://www.figma.com/design/GvYjV98aVqGmfqyVZEjx9a/GreatJob?node-id=1-1100&m=dev).
