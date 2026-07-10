@@ -1,0 +1,29 @@
+header.header
+	.container.header__inner
+		include ../components/logo.pug
+		nav.header__nav(aria-label="Основная навигация")
+			a.header__link(href="#about") О нас
+			a.header__link(href="#reviews") Отзывы
+			a.header__link(href="#pricing") Тарифы
+			a.header__link(href="#faq") FAQ
+		.header__actions
+			include ../components/icon-button.pug
+			+icon-button('telegram', 'Открыть Telegram')
+			a.button.button--header(href="#contact") Связаться с нами
+		button.header__burger(type="button", aria-expanded="false", aria-controls="header-menu", aria-label="Открыть меню")
+			span
+			span
+			span
+	.header-menu#header-menu(aria-hidden="true")
+		.header-menu__top
+			include ../components/logo.pug
+			button.header-menu__close(type="button", aria-label="Закрыть меню")
+				span
+				span
+		.header-menu__body
+			nav.header-menu__nav(aria-label="Мобильная навигация")
+				a.header-menu__link(href="#about") О нас
+				a.header-menu__link(href="#reviews") Отзывы
+				a.header-menu__link(href="#pricing") Тарифы
+				a.header-menu__link(href="#faq") FAQ
+				a.button.button--header-menu(href="#contact") Связаться с нами

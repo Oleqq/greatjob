@@ -1,0 +1,6 @@
+mixin step-card(modifier, title, description, art)
+	article.step-card(class=`step-card--${modifier}`)
+		.step-card__content
+			h3.step-card__title= title
+			p.step-card__description= description
+		img.step-card__art(src=`./images/steps/${art}.svg`, alt="", aria-hidden="true")

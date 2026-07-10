@@ -1,0 +1,29 @@
+{
+	"name": "greatjob-static",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Static-first GreatJob landing page before WordPress and ACF integration.",
+	"scripts": {
+		"build": "npm run build:pug && npm run build:scss && npm run build:js",
+		"build:pug": "node ./scripts/build-pug.js",
+		"build:scss": "sass static/scss/style.scss static/css/style.css --no-source-map",
+		"build:js": "node ./scripts/build-js.js",
+		"watch:pug": "node ./scripts/build-pug.js --watch",
+		"watch:scss": "sass static/scss/style.scss static/css/style.css --no-source-map --watch",
+		"watch:js": "node ./scripts/build-js.js --watch",
+		"watch": "node ./scripts/dev.js",
+		"dev": "node ./scripts/dev.js",
+		"dev:open": "node ./scripts/dev.js --open index.html",
+		"serve": "node ./scripts/serve-static.js",
+		"preview": "npm run build && node ./scripts/serve-static.js --open index.html",
+		"lint": "npm run build"
+	},
+	"devDependencies": {
+		"esbuild": "0.28.0",
+		"pug": "3.0.4",
+		"sass": "1.93.2"
+	},
+	"dependencies": {
+		"swiper": "^14.0.5"
+	}
+}

@@ -1,0 +1,34 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.metrics .section-title { text-align: center; }
+.metrics__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; gap: 24px; margin-top: 48px; }
+.metrics__column { display: flex; width: 100%; flex-direction: column; gap: 24px; }
+.metrics-card { position: relative; width: 100%; min-width: 0; overflow: hidden; border-radius: 20px; color: $color-paper; transition: transform $ease, box-shadow $ease; @include adaptive-value(height, 200, 220, 768, 1280); }
+.metrics-card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(20, 20, 20, .14); }
+.metrics-card--companies { background: #1e1d17; @include adaptive-value(height, 320, 464, 768, 1280); }
+.metrics-card--resume { background: #b47aff; }
+.metrics-card--vacancies { background: #ffbf00; }
+.metrics-card--support { background: #ff7da5; }
+.metrics-card--strategy { background: #25bdea; }
+.metrics-card__art { position: absolute; inset: 0; pointer-events: none; }
+.metrics-card__svg { position: absolute; display: block; max-width: none; height: auto; }
+.metrics-card--resume .metrics-card__svg { top: 39px; left: 0; width: calc(100% + 7px); }
+.metrics-card--vacancies .metrics-card__svg { top: -12px; right: -32px; width: 276px; }
+.metrics-card--companies .metrics-card__svg { top: -132px; left: 0; width: 100%; }
+.metrics-card--support .metrics-card__svg { top: -44px; right: -1px; width: 288px; }
+.metrics-card--strategy .metrics-card__svg { top: 0; left: 0; width: 100%; }
+.metrics-card__content { position: absolute; right: 32px; bottom: 32px; left: 32px; display: flex; flex-direction: column; gap: 12px; }
+.metrics-card__title { width: 289px; max-width: 100%; font-family: "Cygre ExtraBold", Arial, sans-serif; @include adaptive-font(22, 28); font-weight: 800; line-height: 1.1; }
+.metrics-card__description { width: 289px; max-width: 100%; font-family: "Inter", Arial, sans-serif; @include adaptive-font(14, 16); line-height: 1.2; }
+
+@media (max-width: 900px) {
+	.metrics__grid { grid-template-columns: 1fr; }
+	.metrics-card--companies { grid-column: auto; }
+}
+
+@media (max-width: 560px) {
+	.metrics__grid { grid-template-columns: 1fr; }
+	.metrics__column { gap: 16px; }
+	.metrics-card--companies { grid-column: auto; }
+}

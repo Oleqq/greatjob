@@ -1,0 +1,12 @@
+section.section.metrics
+	.container
+		h2.section-title План действий в цифрах
+		include ../components/metrics-card.pug
+		.metrics__grid
+			.metrics__column
+				+metrics-card('resume', '3–5 рабочих дней', 'на подготовку нового резюме', 'metrics-resume-art')
+				+metrics-card('vacancies', '20–40 вакансий', 'подберём под ваш опыт и цели', 'metrics-vacancies-art')
+			+metrics-card('companies', '100+ компаний', 'База из компаний, которые ждут вашего резюме', 'metrics-companies-art')
+			.metrics__column
+				+metrics-card('support', '7, 14 или 30 дней', 'сопровождаем вас во время поиска', 'metrics-support-art')
+				+metrics-card('strategy', '1 индивидуальная стратегия', 'составим под выбранное направление', 'metrics-strategy-art')

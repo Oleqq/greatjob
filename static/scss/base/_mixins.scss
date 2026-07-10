@@ -1,0 +1,28 @@
+@use "sass:math";
+
+@mixin adaptive-font($min-size, $max-size, $min-width: 360, $max-width: 1600) {
+	$slope: math.div($max-size - $min-size, $max-width - $min-width);
+	$intersect: $min-size - $slope * $min-width;
+
+	font-size: clamp(
+		#{$min-size}px,
+		calc(#{$slope * 100}vw + #{$intersect}px),
+		#{$max-size}px
+	);
+}
+
+@mixin adaptive-value($property, $min-size, $max-size, $min-width: 360, $max-width: 1600) {
+	$slope: math.div($max-size - $min-size, $max-width - $min-width);
+	$intersect: $min-size - $slope * $min-width;
+
+	#{$property}: clamp(
+		#{$min-size}px,
+		calc(#{$slope * 100}vw + #{$intersect}px),
+		#{$max-size}px
+	);
+}
+
+@mixin section-space($desktop: 90, $mobile: 64) {
+	@include adaptive-value(padding-top, $mobile, $desktop);
+	@include adaptive-value(padding-bottom, $mobile, $desktop);
+}

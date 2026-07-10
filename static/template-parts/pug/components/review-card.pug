@@ -1,0 +1,12 @@
+mixin review-card(title, body, author, stars, line = 'author-line-32.svg')
+	article.swiper-slide.review-card
+		.review-card__content
+			img.review-card__quote(src="./images/reviews/quote.svg", alt="", aria-hidden="true")
+			.review-card__copy
+				h3.review-card__title= title
+				p.review-card__text= body
+		.review-card__meta
+				.review-card__author
+					img.review-card__author-line(class=line === 'author-line-40.svg' ? 'review-card__author-line--long' : '', src=`./images/reviews/${line}`, alt="", aria-hidden="true")
+					span= author
+				img.review-card__stars(src=`./images/reviews/${stars}`, alt="5 из 5", width="120", height="24")

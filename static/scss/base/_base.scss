@@ -1,0 +1,16 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+	color: $color-ink;
+	background: $color-paper;
+	font-family: "Inter", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.2;
+}
+.page { overflow-x: clip; }
+.container { width: min(calc(100% - 48px), $container); margin-inline: auto; }
+.section { @include section-space(90, 64); }
+.section-title { font-family: "Cygre ExtraBold", Arial, sans-serif; @include adaptive-font(32, 48); font-weight: 800; line-height: 1.1; }
+.eyebrow { margin-bottom: 18px; color: $color-purple; font-size: 14px; font-weight: 600; text-transform: uppercase; }
+@media (max-width: 767px) { .container { width: min(calc(100% - 32px), $container); } }

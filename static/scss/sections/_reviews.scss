@@ -1,0 +1,216 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.reviews {
+	.section-title {
+		text-align: center;
+	}
+
+	&__slider {
+		position: relative;
+		width: 100vw;
+		margin-top: 40px;
+		margin-left: calc(50% - 50vw);
+		padding: 0 20px;
+		overflow: hidden;
+		touch-action: pan-y;
+	}
+
+	.swiper-wrapper {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: stretch;
+		box-sizing: content-box;
+	}
+
+	.swiper-slide {
+		position: relative;
+		display: block;
+		flex-shrink: 0;
+		width: 100%;
+		height: auto;
+		transition-property: transform;
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: center;
+		gap: 12px;
+		margin-top: 40px;
+	}
+
+	&__button {
+		display: inline-flex;
+		width: 52px;
+		height: 52px;
+		align-items: center;
+		justify-content: center;
+		border: 0;
+		border-radius: 50%;
+		background: $color-dark;
+		color: $color-paper;
+		font-size: 30px;
+		line-height: 1;
+		cursor: pointer;
+		transition: transform $ease, background-color $ease, opacity $ease;
+
+		&:hover {
+			background: $color-blue;
+			transform: translateY(-3px);
+		}
+
+		&:focus-visible {
+			outline: 3px solid $color-blue;
+			outline-offset: 3px;
+		}
+
+		&.swiper-button-disabled {
+			opacity: 0.4;
+			pointer-events: none;
+		}
+	}
+
+	&__button-icon {
+		display: block;
+		width: 18.667px;
+		height: 18.667px;
+	}
+}
+
+.review-card {
+	position: relative;
+	display: flex;
+		@include adaptive-value(min-height, 420, 496, 768, 1600);
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 32px 24px 24px;
+		border-radius: 20px;
+		background: #edfbff;
+		overflow: hidden;
+		transition: transform $ease, box-shadow $ease;
+
+	&:hover {
+		transform: translateY(-6px);
+		box-shadow: 0 16px 32px rgb(20 20 20 / 10%);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__quote {
+		width: 21px;
+		height: 17px;
+		margin-bottom: 24px;
+		object-fit: contain;
+	}
+
+	&__copy {
+		display: grid;
+		gap: 16px;
+	}
+
+	&__title {
+		margin: 0;
+		font-family: "Cygre ExtraBold", Arial, sans-serif;
+		font-size: 24px;
+		color: $color-ink;
+		font-weight: 800;
+		line-height: 1.2;
+	}
+
+	&__text {
+		margin: 0;
+		font-family: "Inter", Arial, sans-serif;
+		font-size: 16px;
+		color: $color-ink;
+		line-height: 1.2;
+	}
+
+	&__meta {
+		display: flex;
+		position: absolute;
+		right: 24px;
+		bottom: 24px;
+		left: 24px;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 12px;
+	}
+
+	&__author {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		gap: 10px;
+		font-size: 16px;
+		line-height: 1.2;
+
+		span {
+			max-width: 190px;
+		}
+	}
+
+	&__author-line {
+		width: 2px;
+		height: 32px;
+		flex: 0 0 2px;
+
+		&--long {
+			height: 40px;
+		}
+	}
+
+	&__stars {
+		display: block;
+		width: 120px;
+		height: 24px;
+		object-fit: contain;
+	}
+}
+
+@media (max-width: 900px) {
+	.reviews__slider {
+		padding: 0 16px;
+	}
+
+	.review-card {
+		min-height: clamp(340px, 78vw, 420px);
+		height: auto;
+		justify-content: space-between;
+	}
+
+	.review-card__meta {
+		position: static;
+		align-items: flex-end;
+		margin-top: auto;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		width: 100%;
+	}
+
+	.review-card__stars {
+		width: 120px !important;
+		height: 24px !important;
+		max-width: 120px !important;
+		justify-self: end;
+		object-fit: contain;
+	}
+}
+
+@media (max-width: 560px) {
+	.review-card {
+		padding: 24px 16px 20px;
+		min-height: clamp(320px, 92vw, 380px);
+		border-radius: 16px;
+	}
+
+	.review-card__quote { margin-bottom: 20px; }
+	.review-card__copy { gap: 12px; }
+	.review-card__title { font-size: 18px; }
+	.review-card__text { font-size: 14px; }
+	.review-card__meta { right: 16px; left: 16px; }
+	.review-card__author { font-size: 14px; }
+}

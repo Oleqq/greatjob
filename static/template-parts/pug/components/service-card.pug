@@ -1,0 +1,9 @@
+mixin service-card(modifier, title, features)
+	article.service-card(class=`service-card--${modifier}`)
+		h3.service-card__title= title
+		ul.service-card__features
+			each feature in features
+				li.service-card__feature
+					img.service-card__feature-icon(src="./images/services/service-star.svg", alt="", aria-hidden="true")
+					span= feature
+		a.service-card__button.button(href="#contact") Узнать детали

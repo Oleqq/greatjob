@@ -1,0 +1,10 @@
+@use "../base/variables" as *;
+
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 16px 20px; border-radius: $radius; color: $color-paper; background: $color-blue; font-weight: 600; line-height: 1.2; transition: transform $ease, background-color $ease, color $ease; }
+.button:hover { transform: translateY(-2px); background: #14c8ff; }
+.button--header { width: 300px; }
+.button--hero { width: 300px; }
+.button--header-menu { width: min(300px, 100%); margin-top: 28px; }
+.button--dark { color: $color-paper; background: $color-dark; }
+.button--dark:hover { background: #2b2b2b; }
+.button--light { color: $color-dark; background: $color-paper; }

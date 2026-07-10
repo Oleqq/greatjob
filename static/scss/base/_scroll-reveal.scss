@@ -1,0 +1,74 @@
+.has-scroll-reveal {
+	section {
+		opacity: 0;
+		transition: 1s ease;
+		transform: translateY(50px);
+		will-change: opacity, transform;
+	}
+
+	section.hero,
+	section.animated {
+		opacity: 1;
+		transition: 1s ease;
+		transform: translateY(0);
+		will-change: auto;
+	}
+
+	.page > footer {
+		opacity: 0;
+		transform: translateY(50px);
+		transition: 1s ease;
+	}
+
+	.page > footer.animated {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	[data-reveal-item] {
+		--reveal-item-y: 28px;
+		opacity: 0;
+		transform: translate3d(0, var(--reveal-item-y), 0);
+		transition: opacity 680ms cubic-bezier(.12, .82, .2, 1) var(--reveal-delay, 0ms), transform 680ms cubic-bezier(.12, .82, .2, 1) var(--reveal-delay, 0ms);
+		will-change: opacity, transform;
+	}
+
+	[data-reveal-item="title"] { --reveal-item-y: 20px; }
+	[data-reveal-item="card"] { --reveal-item-y: 34px; }
+
+	[data-reveal-item].is-reveal-visible {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+		will-change: auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.has-scroll-reveal {
+		section,
+		.page > footer {
+			transform: translateY(50px);
+			transition-duration: 1s;
+		}
+
+		[data-reveal-item] {
+			--reveal-item-y: 20px;
+			transition-duration: 520ms;
+		}
+
+		[data-reveal-item="card"] { --reveal-item-y: 24px; }
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.has-scroll-reveal {
+		section,
+		.page > footer,
+		[data-reveal-item] {
+			opacity: 1;
+			transform: none;
+			transition: none;
+			will-change: auto;
+		}
+	}
+}

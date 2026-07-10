@@ -1,0 +1,29 @@
+section.section.faq#faq
+	.container
+		h2.section-title Часто задаваемые вопросы
+		include ../components/faq-item.pug
+		.faq-layout
+			.faq-tabs.swiper(role="tablist", aria-label="Категории FAQ")
+				.faq-tabs__wrapper.swiper-wrapper
+					button.faq-tab.swiper-slide.is-active#faq-tab-main(type="button", role="tab", aria-selected="true", aria-controls="faq-panel-main", data-faq-tab="main") Основное
+					button.faq-tab.swiper-slide#faq-tab-process(type="button", role="tab", aria-selected="false", aria-controls="faq-panel-process", data-faq-tab="process") Процесс и условия
+					button.faq-tab.swiper-slide#faq-tab-guarantees(type="button", role="tab", aria-selected="false", aria-controls="faq-panel-guarantees", data-faq-tab="guarantees") Гарантии
+			.faq-panels
+				.faq-panel#faq-panel-main(role="tabpanel", aria-labelledby="faq-tab-main", data-faq-panel="main")
+					.faq-list
+						+faq-item('С чего начать?', 'Опишите вашу ситуацию и цель поиска — мы подскажем оптимальный формат работы и следующий шаг.')
+						+faq-item('Кто будет работать с моим запросом?', 'В зависимости от задачи с вами работает карьерный специалист или координатор. Сложные вопросы дополнительно обсуждаются внутри команды.', true)
+						+faq-item('Чем мы можем вам помочь?', 'Поможем разобраться с опытом, резюме, портфолио, откликами и подготовкой к собеседованиям.')
+						+faq-item('Можно ли заказать только одну услугу?', 'Да, можно выбрать отдельную услугу без оформления полного тарифа.')
+						+faq-item('Сможете помочь, если у меня нет опыта?', 'Да, поможем определить сильные стороны и подобрать подходящую стратегию старта.')
+				.faq-panel#faq-panel-process(role="tabpanel", aria-labelledby="faq-tab-process", data-faq-panel="process", hidden)
+					.faq-list
+						+faq-item('Как проходит работа?', 'Сначала определяем цель, затем собираем материалы и последовательно готовим документы и отклики.')
+						+faq-item('Сколько длится сопровождение?', 'Срок зависит от выбранного тарифа и составляет 3, 7, 14 или 30 рабочих дней.')
+						+faq-item('Можно ли работать удалённо?', 'Да, все встречи и коммуникация проходят онлайн.')
+						+faq-item('Как быстро можно начать?', 'После выбора тарифа согласуем удобное время и отправим список материалов для старта.')
+				.faq-panel#faq-panel-guarantees(role="tabpanel", aria-labelledby="faq-tab-guarantees", data-faq-panel="guarantees", hidden)
+					.faq-list
+						+faq-item('Что входит в гарантию?', 'Мы гарантируем объём работ, обозначенный в выбранном тарифе, и остаёмся на связи на протяжении сопровождения.')
+						+faq-item('Что будет, если понадобится дополнительная помощь?', 'Дополнительные услуги можно подключить отдельно в любой момент работы.')
+						+faq-item('Можно ли изменить формат работы?', 'Да, формат можно обсудить с координатором и адаптировать под текущую задачу.')

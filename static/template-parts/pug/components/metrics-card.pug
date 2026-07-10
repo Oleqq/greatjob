@@ -1,0 +1,7 @@
+mixin metrics-card(modifier, title, description, slot)
+	article.metrics-card(class=`metrics-card--${modifier}`)
+		.metrics-card__art(data-svg-slot=slot, aria-hidden="true")
+			img.metrics-card__svg(src=`./images/metrics/${slot}.svg`, alt="", aria-hidden="true")
+		.metrics-card__content
+			h3.metrics-card__title= title
+			p.metrics-card__description= description

@@ -1,0 +1,10 @@
+mixin faq-item(question, answer, isOpen = false)
+	article.faq-item(class=isOpen ? 'is-open' : '')
+		button.faq-item__summary(type="button", aria-expanded=isOpen ? 'true' : 'false')
+			span= question
+			span.faq-item__icons(aria-hidden="true")
+				span.faq-item__icon-line.faq-item__icon-line--horizontal
+				span.faq-item__icon-line.faq-item__icon-line--vertical
+		.faq-item__answer
+			.faq-item__answer-inner
+				p= answer

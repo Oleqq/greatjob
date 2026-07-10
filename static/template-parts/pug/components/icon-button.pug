@@ -1,0 +1,3 @@
+mixin icon-button(modifier, label)
+	a.icon-button(class=modifier ? `icon-button--${modifier}` : '', href="#", aria-label=label || "Открыть ссылку")
+		img.icon-button__icon(src=modifier === "telegram" ? "./images/telegram.svg" : "./images/telegram-black.svg", alt="", aria-hidden="true")

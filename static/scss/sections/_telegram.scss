@@ -1,0 +1,123 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.telegram-cta {
+	position: relative;
+	width: 100vw;
+	min-height: 400px;
+	margin-left: calc(50% - 50vw);
+	background: #b47aff;
+	overflow: hidden;
+
+	&__pattern {
+		position: absolute;
+		top: -88.19px;
+		left: -46px;
+		width: calc(100% + 61.5px);
+		height: 514.684px;
+		max-width: none;
+		pointer-events: none;
+	}
+
+	&__people {
+		position: absolute;
+		top: -1px;
+		right: 0;
+		width: 61.125vw;
+		max-width: 978px;
+		height: 401px;
+		object-fit: cover;
+		object-position: bottom left;
+		filter: drop-shadow(0 12px 6.6px rgb(0 0 0 / 35%));
+		pointer-events: none;
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		min-height: 400px;
+		align-items: flex-start;
+	}
+
+	&__content {
+		width: 461px;
+		padding-top: 69px;
+		color: $color-paper;
+	}
+
+	h2 {
+		margin: 0;
+		font-family: "Cygre ExtraBold", Arial, sans-serif;
+		@include adaptive-font(36, 48);
+		font-weight: 800;
+		line-height: 1.1;
+	}
+
+	p {
+		width: 392px;
+		margin: 24px 0 0;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	&__button {
+		width: 336px;
+		margin-top: 42px;
+	}
+}
+
+@media (max-width: 900px) {
+	.telegram-cta {
+		min-height: 520px;
+
+		&__inner {
+			min-height: 520px;
+			padding-top: 56px;
+		}
+
+		&__content {
+			width: min(100%, 460px);
+			padding-top: 0;
+		}
+
+		&__people {
+			top: auto;
+			bottom: 0;
+			width: 100%;
+			max-width: none;
+			height: 260px;
+			object-position: bottom center;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.telegram-cta {
+		min-height: 560px;
+
+		&__inner {
+			min-height: 560px;
+			padding-top: 40px;
+		}
+
+		h2 {
+			font-size: 36px;
+		}
+
+		p {
+			width: 100%;
+			font-size: 14px;
+		}
+
+		&__button {
+			width: 100%;
+			margin-top: 32px;
+		}
+
+		&__people {
+			height: 220px;
+		}
+	}
+}

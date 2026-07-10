@@ -1,0 +1,17 @@
+mixin pricing-card(modifier, title, price, saving, features, badge)
+	article.pricing-card(class=`pricing-card--${modifier}`)
+		img.pricing-card__art(class=`pricing-card__art--${modifier}`, src=`./images/pricing/pricing-${modifier}-art.svg`, alt="", aria-hidden="true")
+		.pricing-card__inner
+			.pricing-card__header
+				h3.pricing-card__title= title
+				.pricing-card__price-block
+					strong.pricing-card__price= price
+					span.pricing-card__saving= saving
+			ul.pricing-card__features
+				each feature in features
+					li.pricing-card__feature
+						img.pricing-card__feature-icon(src="./images/pricing/pricing-star.svg", alt="", aria-hidden="true")
+						span= feature
+			a.pricing-card__button.button.button--dark(href="#contact") Выбрать тариф
+		if badge
+			span.pricing-card__badge(class=`pricing-card__badge--${badge.modifier}`)= badge.label

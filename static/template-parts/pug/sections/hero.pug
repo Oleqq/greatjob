@@ -1,0 +1,42 @@
+section.hero#top
+	.hero__layout
+		.hero__visual
+			img.hero__texture(src="./images/hero-texture.jpg", alt="", aria-hidden="true")
+			.hero__inner
+				h1.hero__title
+					span.hero__title-line.hero__title-line--first
+						span Мы
+						span.hero__avatars(aria-hidden="true")
+							img(src="./images/avatar-1.png", alt="")
+							img(src="./images/avatar-2.png", alt="")
+							img(src="./images/avatar-3.png", alt="")
+						span ищем вам работу
+						img.hero__accent(src="./images/hero-accent.svg", alt="", aria-hidden="true")
+					span.hero__title-line.hero__title-line--second
+						span Вы выбираете
+						img.hero__wave(src="./images/hero-wave.svg", alt="", aria-hidden="true")
+						span лучший
+					span.hero__title-line.hero__title-line--third
+						span оффер
+						img.hero__bag(src="./images/hero-bag.svg", alt="", aria-hidden="true")
+				p.hero__description Разбираем ваш опыт, готовим резюме, подбираем вакансии и помогаем пройти собеседования.
+				.hero__actions
+					a.button.button--hero(href="#contact") Связаться с нами
+					include ../components/icon-button.pug
+					+icon-button('telegram-black', 'Открыть Telegram')
+		.hero__stats
+			article.hero-stat
+				strong.hero-stat__value(data-target="7", data-suffix="+")
+					span.hero-stat__value-current(aria-hidden="true") 0+
+					span.hero-stat__value-target 7+
+				p.hero-stat__label лет на рынке
+			article.hero-stat.hero-stat--wide
+				strong.hero-stat__value(data-target="6000", data-suffix="+")
+					span.hero-stat__value-current(aria-hidden="true") 0+
+					span.hero-stat__value-target 6 000+
+				p.hero-stat__label проведенных собеседований
+			article.hero-stat
+				strong.hero-stat__value(data-target="3", data-suffix="")
+					span.hero-stat__value-current(aria-hidden="true") 0
+					span.hero-stat__value-target 3
+				p.hero-stat__label шага до оффера

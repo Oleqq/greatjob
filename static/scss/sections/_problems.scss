@@ -1,0 +1,18 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.problems .section-title { text-align: center; }
+.problem-grid { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 40px; @include adaptive-value(row-gap, 32, 48); @include adaptive-value(column-gap, 16, 24); }
+.problem-card { display: flex; width: 100%; max-width: 384px; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+.problem-card__icon { display: block; flex: 0 0 56px; width: 56px; height: 56px; object-fit: contain; }
+.problem-card__body { display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; }
+.problem-card__title { width: 310px; max-width: 100%; font-family: "Cygre ExtraBold", Arial, sans-serif; @include adaptive-font(22, 28); font-weight: 800; line-height: 1.1; }
+.problem-card__description { width: 352px; max-width: 100%; font-family: "Inter", Arial, sans-serif; @include adaptive-font(14, 16); line-height: 1.2; }
+
+@media (max-width: 900px) {
+	.problem-card { max-width: calc(50% - 12px); }
+}
+
+@media (max-width: 560px) {
+	.problem-card { max-width: 100%; }
+}
