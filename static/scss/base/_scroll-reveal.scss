@@ -14,13 +14,15 @@
 		will-change: auto;
 	}
 
-	.page > footer {
+	.page > footer,
+	#page > footer {
 		opacity: 0;
 		transform: translateY(50px);
 		transition: 1s ease;
 	}
 
-	.page > footer.animated {
+	.page > footer.animated,
+	#page > footer.animated {
 		opacity: 1;
 		transform: translateY(0);
 	}
@@ -46,7 +48,8 @@
 @media (max-width: 767px) {
 	.has-scroll-reveal {
 		section,
-		.page > footer {
+		.page > footer,
+		#page > footer {
 			transform: translateY(50px);
 			transition-duration: 1s;
 		}
@@ -64,6 +67,7 @@
 	.has-scroll-reveal {
 		section,
 		.page > footer,
+		#page > footer,
 		[data-reveal-item] {
 			opacity: 1;
 			transform: none;

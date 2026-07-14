@@ -1,0 +1,102 @@
+{
+	"key": "group_greatjob_footer_options",
+	"title": "Footer",
+	"fields": [
+		{
+			"key": "field_greatjob_footer_copyright",
+			"label": "Копирайт",
+			"name": "copyright_text",
+			"type": "text",
+			"default_value": "© 2026 GreatJob"
+		},
+		{
+			"key": "field_greatjob_footer_columns",
+			"label": "Колонки навигации",
+			"name": "columns",
+			"type": "repeater",
+			"layout": "block",
+			"button_label": "Добавить колонку",
+			"min": 0,
+			"max": 0,
+			"sub_fields": [
+				{
+					"key": "field_greatjob_footer_column_label",
+					"label": "Заголовок колонки",
+					"name": "label",
+					"type": "text"
+				},
+				{
+					"key": "field_greatjob_footer_column_links",
+					"label": "Ссылки",
+					"name": "links",
+					"type": "repeater",
+					"layout": "table",
+					"button_label": "Добавить ссылку",
+					"min": 0,
+					"max": 0,
+					"sub_fields": [
+						{
+							"key": "field_greatjob_footer_link_label",
+							"label": "Текст",
+							"name": "label",
+							"type": "text"
+						},
+						{
+							"key": "field_greatjob_footer_link_url",
+							"label": "Ссылка",
+							"name": "url",
+							"type": "text"
+						}
+					]
+				}
+			]
+		},
+		{
+			"key": "field_greatjob_footer_telegram_label",
+			"label": "Подпись над каналом",
+			"name": "telegram_label",
+			"type": "text",
+			"default_value": "Подпишитесь на наш Тг-канал"
+		},
+		{
+			"key": "field_greatjob_footer_telegram_name",
+			"label": "Название канала",
+			"name": "telegram_channel_name",
+			"type": "text",
+			"default_value": "GreatJob | Вакансии в IT и Digital"
+		},
+		{
+			"key": "field_greatjob_footer_telegram_description",
+			"label": "Описание канала",
+			"name": "telegram_channel_description",
+			"type": "text",
+			"default_value": "Здесь мы делимся актуальными вакансиями, новостями и акциями для клиентов"
+		},
+		{
+			"key": "field_greatjob_footer_telegram_url",
+			"label": "Ссылка на Telegram-канал",
+			"name": "telegram_url",
+			"type": "url",
+			"default_value": "https://t.me/"
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "options_page",
+				"operator": "==",
+				"value": "greatjob-footer-options"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1784007430
+}

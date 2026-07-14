@@ -1,0 +1,52 @@
+{
+	"key": "group_greatjob_service_cpt",
+	"title": "Услуга — карточка и страница",
+	"fields": [
+		{
+			"key": "field_greatjob_service_features",
+			"label": "Пункты списка (карточка на главной)",
+			"name": "features",
+			"type": "repeater",
+			"layout": "table",
+			"button_label": "Добавить пункт",
+			"min": 0,
+			"max": 0,
+			"sub_fields": [
+				{
+					"key": "field_greatjob_service_feature_text",
+					"label": "Текст",
+					"name": "text",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"key": "field_greatjob_service_wide",
+			"label": "Широкая карточка (на 2 колонки)",
+			"name": "wide_card",
+			"type": "true_false",
+			"instructions": "Как карточка «Подготовка к собеседованиям» в исходном макете — растягивается на 2 колонки в верхнем ряду грида.",
+			"default_value": 0,
+			"ui": 1
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "greatjob_service"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "Заголовок и полное описание услуги (для страницы услуги) заполняются через стандартные поля «Заголовок записи» и редактор контента. Порядок карточек — через drag-and-drop в списке услуг (page-attributes).",
+	"show_in_rest": 0,
+	"modified": 1784005708
+}

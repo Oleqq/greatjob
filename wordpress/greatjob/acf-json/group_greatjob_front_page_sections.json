@@ -1,0 +1,660 @@
+{
+	"key": "group_greatjob_front_page_sections",
+	"title": "Главная — секции",
+	"fields": [
+		{
+			"key": "field_greatjob_sections",
+			"label": "Секции страницы",
+			"name": "sections",
+			"type": "flexible_content",
+			"instructions": "Секции можно перетаскивать, чтобы менять порядок на странице.",
+			"required": 0,
+			"layouts": {
+				"layout_greatjob_hero": {
+					"key": "layout_greatjob_hero",
+					"name": "hero",
+					"label": "Hero",
+					"display": "block",
+					"sub_fields": [
+						{
+							"key": "field_greatjob_hero_heading_line_1_start",
+							"label": "Заголовок, строка 1 (до аватаров)",
+							"name": "heading_line_1_start",
+							"type": "text",
+							"default_value": "Мы"
+						},
+						{
+							"key": "field_greatjob_hero_avatars",
+							"label": "Аватары в заголовке",
+							"name": "avatars",
+							"type": "repeater",
+							"instructions": "До 3 фото, отображаются рядом с первой строкой заголовка.",
+							"layout": "table",
+							"button_label": "Добавить аватар",
+							"min": 0,
+							"max": 3,
+							"sub_fields": [
+								{
+									"key": "field_greatjob_hero_avatar_image",
+									"label": "Фото",
+									"name": "image",
+									"type": "image",
+									"return_format": "url",
+									"preview_size": "thumbnail"
+								}
+							]
+						},
+						{
+							"key": "field_greatjob_hero_heading_line_1_end",
+							"label": "Заголовок, строка 1 (после аватаров)",
+							"name": "heading_line_1_end",
+							"type": "text",
+							"default_value": "ищем вам работу"
+						},
+						{
+							"key": "field_greatjob_hero_heading_line_2_start",
+							"label": "Заголовок, строка 2 (до волны)",
+							"name": "heading_line_2_start",
+							"type": "text",
+							"default_value": "Вы выбираете"
+						},
+						{
+							"key": "field_greatjob_hero_heading_line_2_end",
+							"label": "Заголовок, строка 2 (после волны)",
+							"name": "heading_line_2_end",
+							"type": "text",
+							"default_value": "лучший"
+						},
+						{
+							"key": "field_greatjob_hero_heading_line_3",
+							"label": "Заголовок, строка 3",
+							"name": "heading_line_3",
+							"type": "text",
+							"default_value": "оффер"
+						},
+						{
+							"key": "field_greatjob_hero_description",
+							"label": "Описание",
+							"name": "description",
+							"type": "textarea",
+							"rows": 3,
+							"new_lines": "",
+							"default_value": "Разбираем ваш опыт, готовим резюме, подбираем вакансии и помогаем пройти собеседования."
+						},
+						{
+							"key": "field_greatjob_hero_primary_button",
+							"label": "Основная кнопка",
+							"name": "primary_button",
+							"type": "link",
+							"return_format": "array",
+							"default_value": {
+								"title": "Связаться с нами",
+								"url": "#contact",
+								"target": ""
+							}
+						},
+						{
+							"key": "field_greatjob_hero_telegram_url",
+							"label": "Ссылка на Telegram",
+							"name": "telegram_url",
+							"type": "url",
+							"default_value": "https://t.me/"
+						},
+						{
+							"key": "field_greatjob_hero_stat_one",
+							"label": "Статистика 1",
+							"name": "stat_one",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_hero_stat_one_value",
+									"label": "Значение",
+									"name": "value",
+									"type": "number",
+									"default_value": 7
+								},
+								{
+									"key": "field_greatjob_hero_stat_one_suffix",
+									"label": "Суффикс",
+									"name": "suffix",
+									"type": "text",
+									"default_value": "+"
+								},
+								{
+									"key": "field_greatjob_hero_stat_one_label",
+									"label": "Подпись",
+									"name": "label",
+									"type": "text",
+									"default_value": "лет на рынке"
+								}
+							]
+						},
+						{
+							"key": "field_greatjob_hero_stat_two",
+							"label": "Статистика 2 (широкая карточка)",
+							"name": "stat_two",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_hero_stat_two_value",
+									"label": "Значение",
+									"name": "value",
+									"type": "number",
+									"default_value": 6000
+								},
+								{
+									"key": "field_greatjob_hero_stat_two_suffix",
+									"label": "Суффикс",
+									"name": "suffix",
+									"type": "text",
+									"default_value": "+"
+								},
+								{
+									"key": "field_greatjob_hero_stat_two_label",
+									"label": "Подпись",
+									"name": "label",
+									"type": "text",
+									"default_value": "проведенных собеседований"
+								}
+							]
+						},
+						{
+							"key": "field_greatjob_hero_stat_three",
+							"label": "Статистика 3",
+							"name": "stat_three",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_hero_stat_three_value",
+									"label": "Значение",
+									"name": "value",
+									"type": "number",
+									"default_value": 3
+								},
+								{
+									"key": "field_greatjob_hero_stat_three_suffix",
+									"label": "Суффикс",
+									"name": "suffix",
+									"type": "text",
+									"default_value": ""
+								},
+								{
+									"key": "field_greatjob_hero_stat_three_label",
+									"label": "Подпись",
+									"name": "label",
+									"type": "text",
+									"default_value": "шага до оффера"
+								}
+							]
+						}
+					],
+					"min": "",
+					"max": ""
+				},
+				"layout_greatjob_problems": {
+					"key": "layout_greatjob_problems",
+					"name": "problems",
+					"label": "Проблемы",
+					"display": "block",
+					"sub_fields": [
+						{
+							"key": "field_greatjob_problems_title",
+							"label": "Заголовок секции",
+							"name": "title",
+							"type": "text",
+							"default_value": "Решаем ваши проблемы"
+						},
+						{
+							"key": "field_greatjob_problems_cards",
+							"label": "Карточки",
+							"name": "cards",
+							"type": "repeater",
+							"layout": "block",
+							"button_label": "Добавить карточку",
+							"min": 0,
+							"max": 0,
+							"sub_fields": [
+								{
+									"key": "field_greatjob_problems_card_icon",
+									"label": "Иконка",
+									"name": "icon",
+									"type": "image",
+									"return_format": "url",
+									"preview_size": "thumbnail"
+								},
+								{
+									"key": "field_greatjob_problems_card_title",
+									"label": "Заголовок карточки",
+									"name": "title",
+									"type": "text"
+								},
+								{
+									"key": "field_greatjob_problems_card_description",
+									"label": "Описание карточки",
+									"name": "description",
+									"type": "textarea",
+									"rows": 3,
+									"new_lines": ""
+								}
+							]
+						}
+					],
+					"min": "",
+					"max": ""
+				},
+				"layout_greatjob_metrics": {
+					"key": "layout_greatjob_metrics",
+					"name": "metrics",
+					"label": "Цифры",
+					"display": "block",
+					"sub_fields": [
+						{
+							"key": "field_greatjob_metrics_title",
+							"label": "Заголовок секции",
+							"name": "title",
+							"type": "text",
+							"default_value": "План действий в цифрах"
+						},
+						{
+							"key": "field_greatjob_metrics_card_resume",
+							"label": "Карточка: резюме",
+							"name": "card_resume",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_metrics_card_resume_title",
+									"label": "Заголовок",
+									"name": "title",
+									"type": "text",
+									"default_value": "3–5 рабочих дней"
+								},
+								{
+									"key": "field_greatjob_metrics_card_resume_description",
+									"label": "Описание",
+									"name": "description",
+									"type": "text",
+									"default_value": "на подготовку нового резюме"
+								}
+							]
+						},
+						{
+							"key": "field_greatjob_metrics_card_vacancies",
+							"label": "Карточка: вакансии",
+							"name": "card_vacancies",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_metrics_card_vacancies_title",
+									"label": "Заголовок",
+									"name": "title",
+									"type": "text",
+									"default_value": "20–40 вакансий"
+								},
+								{
+									"key": "field_greatjob_metrics_card_vacancies_description",
+									"label": "Описание",
+									"name": "description",
+									"type": "text",
+									"default_value": "подберём под ваш опыт и цели"
+								}
+							]
+						},
+						{
+							"key": "field_greatjob_metrics_card_companies",
+							"label": "Карточка: компании",
+							"name": "card_companies",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_metrics_card_companies_title",
+									"label": "Заголовок",
+									"name": "title",
+									"type": "text",
+									"default_value": "100+ компаний"
+								},
+								{
+									"key": "field_greatjob_metrics_card_companies_description",
+									"label": "Описание",
+									"name": "description",
+									"type": "text",
+									"default_value": "База из компаний, которые ждут вашего резюме"
+								}
+							]
+						},
+						{
+							"key": "field_greatjob_metrics_card_support",
+							"label": "Карточка: сопровождение",
+							"name": "card_support",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_metrics_card_support_title",
+									"label": "Заголовок",
+									"name": "title",
+									"type": "text",
+									"default_value": "7, 14 или 30 дней"
+								},
+								{
+									"key": "field_greatjob_metrics_card_support_description",
+									"label": "Описание",
+									"name": "description",
+									"type": "text",
+									"default_value": "сопровождаем вас во время поиска"
+								}
+							]
+						},
+						{
+							"key": "field_greatjob_metrics_card_strategy",
+							"label": "Карточка: стратегия",
+							"name": "card_strategy",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_metrics_card_strategy_title",
+									"label": "Заголовок",
+									"name": "title",
+									"type": "text",
+									"default_value": "1 индивидуальная стратегия"
+								},
+								{
+									"key": "field_greatjob_metrics_card_strategy_description",
+									"label": "Описание",
+									"name": "description",
+									"type": "text",
+									"default_value": "составим под выбранное направление"
+								}
+							]
+						}
+					],
+					"min": "",
+					"max": ""
+				},
+				"layout_greatjob_steps": {
+					"key": "layout_greatjob_steps",
+					"name": "steps",
+					"label": "Шаги",
+					"display": "block",
+					"sub_fields": [
+						{
+							"key": "field_greatjob_steps_title",
+							"label": "Заголовок секции",
+							"name": "title",
+							"type": "text",
+							"default_value": "Три шага до предложения о работе"
+						},
+						{
+							"key": "field_greatjob_steps_card_goal",
+							"label": "Карточка 1: цель",
+							"name": "card_goal",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_steps_card_goal_title",
+									"label": "Заголовок",
+									"name": "title",
+									"type": "text",
+									"default_value": "Определяем цель"
+								},
+								{
+									"key": "field_greatjob_steps_card_goal_description",
+									"label": "Описание",
+									"name": "description",
+									"type": "textarea",
+									"rows": 3,
+									"new_lines": "",
+									"default_value": "Работаем с вашим опытом, выделяем сильные стороны и следуем ожиданиям. Выбираем подходящие должности и формируем стратегию поиска"
+								}
+							]
+						},
+						{
+							"key": "field_greatjob_steps_card_employers",
+							"label": "Карточка 2: работодатели",
+							"name": "card_employers",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_steps_card_employers_title",
+									"label": "Заголовок",
+									"name": "title",
+									"type": "text",
+									"default_value": "Выходим на работодателей"
+								},
+								{
+									"key": "field_greatjob_steps_card_employers_description",
+									"label": "Описание",
+									"name": "description",
+									"type": "textarea",
+									"rows": 3,
+									"new_lines": "",
+									"default_value": "Разрабатываем резюме, страницы кандидата и сопроводительные письма. Подбираем вакансии и помогаем получать приглашения на собеседования"
+								}
+							]
+						},
+						{
+							"key": "field_greatjob_steps_card_offer",
+							"label": "Карточка 3: оффер",
+							"name": "card_offer",
+							"type": "group",
+							"layout": "block",
+							"sub_fields": [
+								{
+									"key": "field_greatjob_steps_card_offer_title",
+									"label": "Заголовок",
+									"name": "title",
+									"type": "text",
+									"default_value": "Доходим до оффера"
+								},
+								{
+									"key": "field_greatjob_steps_card_offer_description",
+									"label": "Описание",
+									"name": "description",
+									"type": "textarea",
+									"rows": 3,
+									"new_lines": "",
+									"default_value": "Готовим к собеседованиям, помогаем в общении с работодателями, сравниваем предложения и готовимся к переговорам о заработной плате"
+								}
+							]
+						}
+					],
+					"min": "",
+					"max": ""
+				},
+				"layout_greatjob_reviews": {
+					"key": "layout_greatjob_reviews",
+					"name": "reviews",
+					"label": "Отзывы",
+					"display": "block",
+					"instructions": "Карточки отзывов не редактируются здесь — это отдельные записи типа «Отзывы» (CPT). Показываются все опубликованные, порядок — через drag-and-drop в списке отзывов.",
+					"sub_fields": [
+						{
+							"key": "field_greatjob_reviews_title",
+							"label": "Заголовок секции",
+							"name": "title",
+							"type": "text",
+							"default_value": "Отзывы о нашей работе"
+						}
+					],
+					"min": "",
+					"max": ""
+				},
+				"layout_greatjob_pricing": {
+					"key": "layout_greatjob_pricing",
+					"name": "pricing",
+					"label": "Тарифы",
+					"display": "block",
+					"instructions": "Карточки тарифов не редактируются здесь — это отдельные записи типа «Тарифы» (CPT). Показываются все опубликованные, порядок — через drag-and-drop в списке тарифов.",
+					"sub_fields": [
+						{
+							"key": "field_greatjob_pricing_section_title",
+							"label": "Заголовок секции",
+							"name": "title",
+							"type": "text",
+							"default_value": "Тарифы"
+						}
+					],
+					"min": "",
+					"max": ""
+				},
+				"layout_greatjob_services": {
+					"key": "layout_greatjob_services",
+					"name": "services",
+					"label": "Доп. услуги",
+					"display": "block",
+					"instructions": "Карточки услуг не редактируются здесь — это отдельные записи типа «Услуги» (CPT), у каждой есть своя страница. Показываются все опубликованные, порядок — через drag-and-drop в списке услуг.",
+					"sub_fields": [
+						{
+							"key": "field_greatjob_services_section_title",
+							"label": "Заголовок секции",
+							"name": "title",
+							"type": "text",
+							"default_value": "Список дополнительных услуг"
+						}
+					],
+					"min": "",
+					"max": ""
+				},
+				"layout_greatjob_telegram": {
+					"key": "layout_greatjob_telegram",
+					"name": "telegram",
+					"label": "Telegram CTA",
+					"display": "block",
+					"sub_fields": [
+						{
+							"key": "field_greatjob_telegram_title",
+							"label": "Заголовок",
+							"name": "title",
+							"type": "text",
+							"default_value": "Вакансии в нашем ТГ-канале"
+						},
+						{
+							"key": "field_greatjob_telegram_description",
+							"label": "Описание",
+							"name": "description",
+							"type": "textarea",
+							"rows": 2,
+							"new_lines": "",
+							"default_value": "Здесь мы делимся актуальными вакансиями, новостями и акциями для клиентов"
+						},
+						{
+							"key": "field_greatjob_telegram_button_text",
+							"label": "Текст кнопки",
+							"name": "button_text",
+							"type": "text",
+							"default_value": "Подписаться на канал"
+						},
+						{
+							"key": "field_greatjob_telegram_url",
+							"label": "Ссылка на Telegram-канал",
+							"name": "telegram_url",
+							"type": "url",
+							"default_value": "https://t.me/"
+						}
+					],
+					"min": "",
+					"max": ""
+				},
+				"layout_greatjob_faq": {
+					"key": "layout_greatjob_faq",
+					"name": "faq",
+					"label": "FAQ",
+					"display": "block",
+					"sub_fields": [
+						{
+							"key": "field_greatjob_faq_title",
+							"label": "Заголовок секции",
+							"name": "title",
+							"type": "text",
+							"default_value": "Часто задаваемые вопросы"
+						},
+						{
+							"key": "field_greatjob_faq_groups",
+							"label": "Группы вопросов (вкладки)",
+							"name": "groups",
+							"type": "repeater",
+							"layout": "block",
+							"button_label": "Добавить группу",
+							"min": 0,
+							"max": 0,
+							"sub_fields": [
+								{
+									"key": "field_greatjob_faq_group_label",
+									"label": "Название вкладки",
+									"name": "label",
+									"type": "text"
+								},
+								{
+									"key": "field_greatjob_faq_group_items",
+									"label": "Вопросы",
+									"name": "items",
+									"type": "repeater",
+									"layout": "block",
+									"button_label": "Добавить вопрос",
+									"min": 0,
+									"max": 0,
+									"sub_fields": [
+										{
+											"key": "field_greatjob_faq_item_question",
+											"label": "Вопрос",
+											"name": "question",
+											"type": "text"
+										},
+										{
+											"key": "field_greatjob_faq_item_answer",
+											"label": "Ответ",
+											"name": "answer",
+											"type": "textarea",
+											"rows": 3,
+											"new_lines": ""
+										},
+										{
+											"key": "field_greatjob_faq_item_open",
+											"label": "Открыт по умолчанию",
+											"name": "is_open",
+											"type": "true_false",
+											"default_value": 0,
+											"ui": 1
+										}
+									]
+								}
+							]
+						}
+					],
+					"min": "",
+					"max": ""
+				}
+			},
+			"button_label": "Добавить секцию",
+			"min": "",
+			"max": ""
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "page_type",
+				"operator": "==",
+				"value": "front_page"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "Flexible content с секциями главной страницы. Новые секции добавляются как новые layout сюда же.",
+	"show_in_rest": 0,
+	"modified": 1784006902
+}

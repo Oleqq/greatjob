@@ -1,0 +1,58 @@
+{
+	"key": "group_greatjob_review_cpt",
+	"title": "Отзыв — карточка",
+	"fields": [
+		{
+			"key": "field_greatjob_review_body",
+			"label": "Текст отзыва",
+			"name": "body",
+			"type": "textarea",
+			"rows": 4,
+			"new_lines": ""
+		},
+		{
+			"key": "field_greatjob_review_author",
+			"label": "Автор (имя, должность)",
+			"name": "author",
+			"type": "text"
+		},
+		{
+			"key": "field_greatjob_review_rating",
+			"label": "Рейтинг",
+			"name": "rating",
+			"type": "select",
+			"choices": {
+				"0": "0 звёзд",
+				"1": "1 звезда",
+				"2": "2 звезды",
+				"3": "3 звезды",
+				"4": "4 звезды",
+				"5": "5 звёзд"
+			},
+			"default_value": "5",
+			"allow_null": 0,
+			"multiple": 0,
+			"ui": 0,
+			"return_format": "value"
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "greatjob_review"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "Заголовок карточки заполняется через стандартное поле «Заголовок записи». Порядок карточек — через drag-and-drop в списке отзывов (page-attributes).",
+	"show_in_rest": 0,
+	"modified": 1784002554
+}

@@ -60,7 +60,7 @@
 }
 
 @media (max-width: 560px) {
-	.hero { padding-bottom: 0; }
+	.hero { padding-top: 0; padding-bottom: 0; }
 	.hero__layout { width: 100vw; margin-left: calc(50% - 50vw); }
 	.hero__visual { width: 100%; border-radius: 0; }
 	.hero__inner { padding: 40px 16px 32px; }
@@ -76,7 +76,7 @@
 	.hero__description { margin-top: 28px; font-size: 14px; }
 	.hero__actions { align-items: stretch; flex-direction: column; margin-top: 24px; }
 	.hero__actions .button { width: 100%; }
-	.hero__stats { position: static; grid-template-columns: 1fr; gap: 12px; margin-top: 0; padding: 32px 16px 64px; background: $color-paper; }
+	.hero__stats { position: static; grid-template-columns: 1fr; gap: 12px; margin-top: 0; padding: 32px 16px 64px; }
 	.hero-stat { min-height: 0; padding: 20px; border-radius: 14px; }
 	.hero-stat__value { font-size: 48px; }
 }

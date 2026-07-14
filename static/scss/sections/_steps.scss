@@ -30,7 +30,7 @@
 }
 
 @media (max-width: 560px) {
-	.step-card { height: clamp(188px, 62vw, 224px); }
+	.step-card { height: clamp(240px, 78vw, 300px); }
 	.step-card__content { top: 20px; right: 20px; left: 20px; gap: 8px; }
 	.step-card__title { font-size: clamp(18px, 5.2vw, 22px); }
 	.step-card__description { font-size: 12px; }

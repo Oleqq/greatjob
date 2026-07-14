@@ -1,0 +1,117 @@
+{
+	"key": "group_greatjob_pricing_cpt",
+	"title": "Тариф — карточка",
+	"fields": [
+		{
+			"key": "field_greatjob_pricing_price",
+			"label": "Цена",
+			"name": "price",
+			"type": "text",
+			"placeholder": "7 900 ₽"
+		},
+		{
+			"key": "field_greatjob_pricing_saving",
+			"label": "Строка экономии",
+			"name": "saving",
+			"type": "text",
+			"placeholder": "Экономия: 4 800 ₽"
+		},
+		{
+			"key": "field_greatjob_pricing_card_color",
+			"label": "Цвет карточки",
+			"name": "card_color",
+			"type": "color_picker",
+			"default_value": "#edfbff"
+		},
+		{
+			"key": "field_greatjob_pricing_features_color",
+			"label": "Цвет панели преимуществ",
+			"name": "features_color",
+			"type": "color_picker",
+			"default_value": "#d8f6ff"
+		},
+		{
+			"key": "field_greatjob_pricing_art",
+			"label": "Фоновая иллюстрация",
+			"name": "art",
+			"type": "select",
+			"instructions": "Готовые иллюстрации из Figma — каждая со своим позиционированием.",
+			"choices": {
+				"none": "Без иллюстрации",
+				"start": "Вариант 1",
+				"preparation": "Вариант 2",
+				"full": "Вариант 3"
+			},
+			"default_value": "none",
+			"allow_null": 0,
+			"multiple": 0,
+			"ui": 0,
+			"return_format": "value"
+		},
+		{
+			"key": "field_greatjob_pricing_features",
+			"label": "Преимущества",
+			"name": "features",
+			"type": "repeater",
+			"layout": "table",
+			"button_label": "Добавить пункт",
+			"min": 0,
+			"max": 0,
+			"sub_fields": [
+				{
+					"key": "field_greatjob_pricing_feature_text",
+					"label": "Текст",
+					"name": "text",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"key": "field_greatjob_pricing_badge_label",
+			"label": "Текст бейджа (необязательно)",
+			"name": "badge_label",
+			"type": "text",
+			"placeholder": "Выгодно"
+		},
+		{
+			"key": "field_greatjob_pricing_badge_color",
+			"label": "Цвет бейджа",
+			"name": "badge_color",
+			"type": "color_picker",
+			"default_value": "#ffca00"
+		},
+		{
+			"key": "field_greatjob_pricing_button_text",
+			"label": "Текст кнопки",
+			"name": "button_text",
+			"type": "text",
+			"default_value": "Выбрать тариф"
+		},
+		{
+			"key": "field_greatjob_pricing_button_url",
+			"label": "Ссылка кнопки",
+			"name": "button_url",
+			"type": "url",
+			"default_value": "#contact"
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "post_type",
+				"operator": "==",
+				"value": "greatjob_pricing"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "Заголовок карточки заполняется через стандартное поле «Заголовок записи». Порядок карточек — через drag-and-drop в списке тарифов (page-attributes).",
+	"show_in_rest": 0,
+	"modified": 1784004861
+}

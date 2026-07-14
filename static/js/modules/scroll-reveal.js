@@ -1,4 +1,4 @@
-const SCOPE_SELECTOR = ".page > header, .page > section, .page > footer";
+const SCOPE_SELECTOR = ".page > header, .page > section, .page > footer, #page > header, #primary > section, #page > footer";
 const TARGET_SELECTOR = [
 	".section-title",
 	".hero__title",
@@ -72,9 +72,14 @@ export function initScrollReveal() {
 
 	if (!preparedScopes.length) return;
 
-	preparedScopes.forEach(({ targets }) => targets.forEach((target) => {
-		target.dataset.revealItem = "pending";
-	}));
+	const isFirstScreen = (scope) => scope.classList.contains("hero");
+
+	preparedScopes.forEach(({ scope, targets }) => {
+		if (isFirstScreen(scope)) return;
+		targets.forEach((target) => {
+			target.dataset.revealItem = "pending";
+		});
+	});
 	document.body.classList.add("has-scroll-reveal");
 
 	const activate = (preparedScope) => {
@@ -82,6 +87,7 @@ export function initScrollReveal() {
 		preparedScope.activated = true;
 		preparedScope.scope.classList.add("animated", "is-reveal-visible");
 		preparedScope.scope.dispatchEvent(new CustomEvent("greatjob:reveal"));
+		if (isFirstScreen(preparedScope.scope)) return;
 		preparedScope.targets.forEach(revealTarget);
 	};
 

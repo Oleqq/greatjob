@@ -1,0 +1,96 @@
+{
+	"key": "group_greatjob_header_options",
+	"title": "Header",
+	"fields": [
+		{
+			"key": "field_greatjob_header_nav_items",
+			"label": "Пункты меню",
+			"name": "nav_items",
+			"type": "repeater",
+			"instructions": "У каждого пункта можно добавить вложенные пункты — они покажутся выпадающим подменю (на десктопе по наведению, в мобильном меню — списком под пунктом).",
+			"layout": "block",
+			"button_label": "Добавить пункт",
+			"min": 0,
+			"max": 0,
+			"sub_fields": [
+				{
+					"key": "field_greatjob_header_nav_label",
+					"label": "Текст",
+					"name": "label",
+					"type": "text"
+				},
+				{
+					"key": "field_greatjob_header_nav_url",
+					"label": "Ссылка",
+					"name": "url",
+					"type": "text",
+					"instructions": "Якорь секции на главной (например #reviews) или обычный URL."
+				},
+				{
+					"key": "field_greatjob_header_nav_sub_items",
+					"label": "Подменю",
+					"name": "sub_items",
+					"type": "repeater",
+					"layout": "table",
+					"button_label": "Добавить пункт подменю",
+					"min": 0,
+					"max": 0,
+					"sub_fields": [
+						{
+							"key": "field_greatjob_header_nav_sub_label",
+							"label": "Текст",
+							"name": "label",
+							"type": "text"
+						},
+						{
+							"key": "field_greatjob_header_nav_sub_url",
+							"label": "Ссылка",
+							"name": "url",
+							"type": "text"
+						}
+					]
+				}
+			]
+		},
+		{
+			"key": "field_greatjob_header_telegram_url",
+			"label": "Ссылка на Telegram",
+			"name": "telegram_url",
+			"type": "url",
+			"default_value": "https://t.me/"
+		},
+		{
+			"key": "field_greatjob_header_cta_text",
+			"label": "Текст кнопки",
+			"name": "cta_text",
+			"type": "text",
+			"default_value": "Связаться с нами"
+		},
+		{
+			"key": "field_greatjob_header_cta_url",
+			"label": "Ссылка кнопки",
+			"name": "cta_url",
+			"type": "text",
+			"default_value": "#contact"
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "options_page",
+				"operator": "==",
+				"value": "greatjob-header-options"
+			}
+		]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": "",
+	"active": true,
+	"description": "",
+	"show_in_rest": 0,
+	"modified": 1784007430
+}

@@ -6,3 +6,15 @@ Thumbs.db
 static/css/*.css
 static/js/app.js
 static/*.html
+
+# Working notes from the static-layout stage — superseded by docs/progress.md,
+# docs/wordpress.md and docs/responsive-qa.md. Kept on disk, not tracked.
+docs/README.md
+docs/_preview-mobile.png
+docs/animation-plan.md
+docs/faq.md
+docs/footer.md
+docs/pricing.md
+docs/reviews.md
+docs/services.md
+docs/telegram.md
