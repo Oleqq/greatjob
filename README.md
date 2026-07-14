@@ -1,5 +1,7 @@
 # GreatJob
 
+**[greatjob-pi.vercel.app](https://greatjob-pi.vercel.app/) — живой просмотр статичной вёрстки**
+
 Лендинг для сервиса поиска работы. Репозиторий содержит два связанных, но независимых проекта:
 
 1. **`static/`** — исходники вёрстки (Pug + SCSS + native JS), собранные по [макету в Figma](https://www.figma.com/design/GvYjV98aVqGmfqyVZEjx9a/GreatJob?node-id=1-1100&m=dev). Источник истины для всех стилей и скриптов.
@@ -64,7 +66,7 @@ npm run preview     # build + serve
 
 ## Деплой
 
-Статичная сборка (`static/`) деплоится на Vercel через `vercel.json`:
+Статичная сборка (`static/`) деплоится на Vercel: **[greatjob-pi.vercel.app](https://greatjob-pi.vercel.app/)**, через `vercel.json`:
 
 - `buildCommand`: `npm run build`
 - `outputDirectory`: `static`
